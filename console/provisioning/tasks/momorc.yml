@@ -1,0 +1,19 @@
+- name: Clone pichuang/momorc config
+  git:
+    repo=https://github.com/pichuang/momorc
+    dest=/root/.momorc
+    update=no
+    accept_hostkey=true
+
+# TODO: Need fixed pichuang/momorc logging level
+- name: Install momorc
+  command: 'python install.py > /dev/null 2>&1'
+  run_once: true
+  args:
+    chdir: /root/.momorc
+  register: biggg
+
+- debug:
+    msg="{{ biggg.stdout }}"
+- debug:
+    msg="{{ biggg.stderr }}"

@@ -1,1 +1,1 @@
-console ansible_ssh_host=10.211.55.91 ansible_ssh_port=22
+console ansible_ssh_host=10.211.55.91 ansible_port=22 ansible_user=vagrant

@@ -1,14 +1,7 @@
 - hosts: all
   sudo: true
-  task:
-    - name: Replace APT source list
-      replace:
-        dest=/etc/apt/source.lst
-        regexp='us.archive.ubuntu.com'
-        replace='ubuntu.cs.nctu.edu.tw'
-        backup=yes
-    - name: Update APT Cache
-      apt: update_cache=yes
+  tasks:
+    - include: tasks/apt.yml
     - name: Install required packages
       apt: name={{ item }} state=present
       with_items:
@@ -16,3 +9,4 @@
         - tmux
         - git
         - htop
+    - include: tasks/momorc.yml
