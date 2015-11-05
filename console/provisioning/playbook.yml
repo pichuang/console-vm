@@ -10,3 +10,4 @@
         - git
         - htop
     - include: tasks/momorc.yml
+    - include: tasks/ntp.yml
