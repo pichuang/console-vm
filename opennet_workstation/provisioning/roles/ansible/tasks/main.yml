@@ -1,0 +1,22 @@
+- name: Install Ansible ppa
+  apt_repository: repo='ppa:ansible/ansible'
+  tags: ansible
+
+- name: Update APT Cache
+  apt: update_cache=yes
+
+- name: Install Ansible
+  apt: name={{ item }} state=present
+  with_items:
+    - ansible
+  tags: ansible
+
+- name: Check Ansible version
+  command: 'ansible --version'
+  register: ansible_version
+  tags: ansible
+
+- name: Print Ansible version
+  debug:
+    msg: "Ansible Version: {{ ansible_version.stdout }}"
+  tags: ansible

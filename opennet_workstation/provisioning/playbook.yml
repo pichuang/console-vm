@@ -1,0 +1,7 @@
+- hosts: all
+  sudo: true
+  roles:
+    - apt
+    - ntp
+    - momorc
+    - ansible
