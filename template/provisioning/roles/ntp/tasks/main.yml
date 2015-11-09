@@ -13,5 +13,5 @@
   tags: ntp
 
 - name: Be sure ntp daemon is running and enabled
-  service: name=ntpd state=running enabled=yes
+  service: name=ntp state=running enabled=yes
   tags: ntp
