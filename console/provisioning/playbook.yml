@@ -9,5 +9,6 @@
         - tmux
         - git
         - htop
+        - software-properties-common
     - include: tasks/momorc.yml
     - include: tasks/ntp.yml
