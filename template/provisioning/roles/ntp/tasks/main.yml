@@ -15,3 +15,10 @@
 - name: Be sure ntp daemon is running and enabled
   service: name=ntp state=running enabled=yes
   tags: ntp
+
+- name: Check System Time
+  command: 'date'
+  register: time_result
+  tags: ntp
+- debug: msg="System time {{ time_result.stdout }}}"
+  tags: ntp
