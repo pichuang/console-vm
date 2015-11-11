@@ -1,10 +1,10 @@
 ---
 - name: Clone pichuang/momorc config
   git:
-    repo=https://github.com/pichuang/momorc
-    dest=/root/.momorc
-    update=no
-    accept_hostkey=true
+    repo: https://github.com/pichuang/momorc
+    dest: /root/.momorc
+    update: no
+    accept_hostkey: true
   tags: momorc
 # TODO: Need fixed pichuang/momorc logging level
 - name: Install momorc
