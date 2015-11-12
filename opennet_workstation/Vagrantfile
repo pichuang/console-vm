@@ -4,7 +4,7 @@
 Vagrant.configure(2) do |config|
 
   config.vm.box = "parallels/ubuntu-14.04"
-  config.vm.hostname = "opennet"
+  config.vm.hostname = "master"
 
   # Set the name of the VM. See: http://stackoverflow.com/a/17864388/100134
   config.vm.define :opennet do |opennet|
@@ -25,6 +25,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "provisioning/playbook.yml"
     ansible.inventory_path = "provisioning/hosts"
+    ansible.host_key_checking = false
     ansible.sudo = "true"
   end
 end
