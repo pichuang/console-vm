@@ -1,1 +1,1 @@
-onossystemtest ansible_ssh_host=10.211.55.123 ansible_port=22
+onossystemtest ansible_ssh_host=10.211.55.124 ansible_port=22
