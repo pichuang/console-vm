@@ -1,1 +1,1 @@
-opennet1 ansible_ssh_host=10.211.55.115 ansible_port=22 ansible_user=vagrant
+opennet1 ansible_ssh_host=10.211.55.121 ansible_port=22 ansible_user=vagrant
