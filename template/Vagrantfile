@@ -17,7 +17,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.provider "parallels" do |prl|
     prl.memory = 360
-    prl.cpu = 1
+    prl.cpus = 1
   end
 
   #Configuration Management -- Ansible
