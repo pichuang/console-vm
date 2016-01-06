@@ -20,7 +20,7 @@ vagrant up --no-provision
 NEW_IP=$(vagrant ssh-config | grep HostName | awk '{print $2}')
 echo
 echo "New IP Address:" $NEW_IP
-sed -in "" "s/1.1.1.1/$NEW_IP/g" provisioning/hosts
+sed -in "s/1.1.1.1/$NEW_IP/g" ./provisioning/hosts
 
 echo
 echo "Vagrant provision"
